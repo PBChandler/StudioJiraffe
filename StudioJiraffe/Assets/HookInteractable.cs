@@ -6,7 +6,12 @@ public class HookInteractable : MonoBehaviour
     {
         if(collision.gameObject.tag == "PlayerHook")
         {
-            //run some code
+            Event();
         }
+    }
+
+    public virtual void Event()
+    {
+
     }
 }
