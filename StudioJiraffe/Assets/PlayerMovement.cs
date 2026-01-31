@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ProcessJumpInput(InputAction.CallbackContext obj)
     {
-        if(obj.started)
+        if(obj.started || obj.performed)
         {
             dg_onJumpPressed.Invoke();
         }
@@ -290,6 +290,7 @@ public class PlayerMovement : MonoBehaviour
                         else
                         {
                             VerticalVelocity = -0.01f;
+                            isFastFalling = true;
                         }
                     }
                 }
@@ -335,6 +336,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((!isGrounded && !isJumping))
         {
+            isFalling = true;
             VerticalVelocity += MoveStats.Gravity * Time.fixedDeltaTime;
         }
 
