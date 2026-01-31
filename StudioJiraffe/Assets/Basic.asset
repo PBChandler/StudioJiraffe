@@ -21,7 +21,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  GroundDetectionRayLength: 0.02
+  GroundDetectionRayLength: 3
   HeadDetectionRayLength: 0.02
   HeadWidth: 0.75
   JumpHeight: 6.5
@@ -29,10 +29,10 @@ MonoBehaviour:
   TimeTillJumpApex: 0.35
   GravityOnReleaseMultiplier: 2
   MaxFallSpeed: 26
-  NumberOfJumpsAllowed: 4
+  NumberOfJumpsAllowed: 1
   TimeForUpwardsCancel: 0.027
   ApexThreshold: 0.97
-  ApexHangTime: 0.075
+  ApexHangTime: 0.007
   JumpBufferTime: 0.125
   Gravity: -111.85307
   InitialJumpVelocity: 39.148575

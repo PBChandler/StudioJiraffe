@@ -1,7 +1,10 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
+    public PlayerStates m_State = PlayerStates.Regular;
     public PlayerInput player;
     public Rigidbody2D rb;
     Vector2 moveInput = Vector2.zero;
@@ -12,13 +15,16 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D feetColl, bodyColl;
 
     private Vector2 moveVelocity;
-    private bool isFacingRight;
+    public bool isFacingRight;
 
     private RaycastHit2D groundHit;
     private RaycastHit2D headHit;
-    private bool isGrounded;
+    public bool isGrounded;
     private bool bumpedHead;
 
+    public Vector2 lookInput;
+    public bool hookingInput;
+    public bool attackingInput;
 
     public float VerticalVelocity, fastFallTime, fastFallReleaseSpeed;
     private bool isJumping, isFastFalling, isFalling;
@@ -35,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     public delegate void jumpInteraction();
     public jumpInteraction dg_onJumpPressed, dg_onJumpReleased;
     public bool jumpWasPressed = false;
+
+    public Vector2 externalForce;
     private void Awake()
     {
         isFacingRight = true;
@@ -71,11 +79,48 @@ public class PlayerMovement : MonoBehaviour
             case "Jump":
                 ProcessJumpInput(obj);
                 break;
+            case "Look":
+                ProcessLookInput(obj);
+                break;
+            case "Hooking":
+                ProcessHookInput(obj);
+                break;
+            case "Attack":
+                ProcessAttackInput(obj);
+                break;
             default:
                 break;
         }
     }
 
+    private void ProcessAttackInput(InputAction.CallbackContext obj)
+    {
+        if (obj.performed || obj.started)
+        {
+            attackingInput = true;
+        }
+        else
+        {
+            attackingInput= false;
+        }
+    }
+
+    public void ProcessLookInput(InputAction.CallbackContext obj)
+    {
+        lookInput = obj.ReadValue<Vector2>();
+    }
+
+    public void ProcessHookInput(InputAction.CallbackContext obj)
+    {
+        if (obj.performed || obj.started)
+        {
+            hookingInput = true;
+        }
+        else
+        {
+           hookingInput = false;
+        }
+    }
     public void ProcessJumpInput(InputAction.CallbackContext obj)
     {
         if(obj.started)
@@ -96,8 +141,8 @@ public class PlayerMovement : MonoBehaviour
     {
         CollisionChecks();
         Jump();
-
-        if(isGrounded)
+       
+        if (isGrounded)
         {
             Move(MoveStats.GroundAcceleration, MoveStats.GroundDeceleration);
         }
@@ -108,6 +153,8 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Move(float acceleration, float deceleration)
     {
+        if (m_State == PlayerStates.CompletelyImmobile) return;
+        //if (m_State == PlayerStates.NoControl) return;
         if ((moveInput != Vector2.zero))
         {
             TurnCheck(moveInput);
@@ -122,7 +169,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             moveVelocity = Vector2.Lerp(moveVelocity, Vector2.zero, acceleration * Time.fixedDeltaTime);
-            rb.linearVelocity = new Vector2(moveVelocity.x, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(moveVelocity.x + externalForce.x, rb.linearVelocity.y + externalForce.y);
         }
     }
 
@@ -143,12 +190,12 @@ public class PlayerMovement : MonoBehaviour
         if(turnRight)
         {
             isFacingRight = true;
-            transform.Rotate(0, 180f, 0);
+            //transform.Rotate(0, 180f, 0);
         }
         else
         {
             isFacingRight = false;
-            transform.Rotate(0, -180f, 0);
+            //transform.Rotate(0, -180f, 0);
         }
     }
 
@@ -247,7 +294,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void InitiateJump(int naumberOfJumpsUsed)
+    public void InitiateJump(int naumberOfJumpsUsed)
     {
         if(!isJumping)
         {
@@ -260,7 +307,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
-        if(isJumping)
+        if (m_State == PlayerStates.NoControl || m_State == PlayerStates.CompletelyImmobile) return;
+        if (isJumping)
         {
             //headbump check
             if(bumpedHead)
@@ -290,6 +338,7 @@ public class PlayerMovement : MonoBehaviour
                         else
                         {
                             VerticalVelocity = -0.01f;
+                            isFastFalling = true;
                         }
                     }
                 }
@@ -335,6 +384,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((!isGrounded && !isJumping))
         {
+            isFalling = true;
             VerticalVelocity += MoveStats.Gravity * Time.fixedDeltaTime;
         }
 
@@ -359,7 +409,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         CountTimers();
         JumpChecks();
     }
+}
+
+public enum PlayerStates
+{
+    NULL,
+    Regular,
+    Hooking,
+    NoControl,
+    CompletelyImmobile,
 }
