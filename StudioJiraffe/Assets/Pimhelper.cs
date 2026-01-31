@@ -21,6 +21,7 @@ public class Pimhelper : MonoBehaviour
             follower1.occupied = true;
             follower1.target = obj.transform;
             h1.boss = obj.GetComponent<PlayerAiming>();
+            obj.GetComponent<PlayerHealth>().playerID = 0;
             return;
         }
         else
@@ -29,6 +30,7 @@ public class Pimhelper : MonoBehaviour
             obj.GetComponent<PlayerMovement>().animator.SetBool("player2", true);
             follower2.occupied = true;
             follower2.target = obj.transform;
+            obj.GetComponent<PlayerHealth>().playerID = 1;
         }
     }
 }

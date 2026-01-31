@@ -7,6 +7,7 @@ public class HookVisualizer : MonoBehaviour
     public PlayerAiming boss;
     LineRenderer lr;
     private SpriteRenderer kid;
+    public bool on = true;
 
     public void Start()
     {
@@ -16,7 +17,7 @@ public class HookVisualizer : MonoBehaviour
     RaycastHit2D hit;
     public void Update()
     {
-        if (boss == null) return;
+        if (boss == null || on == false) return;
         Vector2 target = boss.direction;
         hit = Physics2D.Raycast(boss.transform.position, target, Mathf.Infinity, boss.LayerMask);
         Debug.DrawLine(boss.transform.position, transform.position, Color.red);

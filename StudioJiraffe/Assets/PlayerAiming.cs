@@ -70,6 +70,7 @@ public class PlayerAiming : MonoBehaviour
             targPM.m_State = PlayerStates.CompletelyImmobile;
             targPM.rb.linearVelocity = Vector2.zero;
             capturedEnemy = targPM.transform;
+            targPM.GetComponent<PlayerHealth>().Hurt(10);
             hookState = hookStates.LURING;
             return;
         }
