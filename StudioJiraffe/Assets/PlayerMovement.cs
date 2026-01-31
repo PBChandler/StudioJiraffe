@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 lookInput;
     public bool hookingInput;
+    public bool attackingInput;
 
     public float VerticalVelocity, fastFallTime, fastFallReleaseSpeed;
     private bool isJumping, isFastFalling, isFalling;
@@ -39,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     public delegate void jumpInteraction();
     public jumpInteraction dg_onJumpPressed, dg_onJumpReleased;
     public bool jumpWasPressed = false;
+
+    public Vector2 externalForce;
     private void Awake()
     {
         isFacingRight = true;
@@ -81,8 +85,23 @@ public class PlayerMovement : MonoBehaviour
             case "Hooking":
                 ProcessHookInput(obj);
                 break;
+            case "Attack":
+                ProcessAttackInput(obj);
+                break;
             default:
                 break;
+        }
+    }
+
+    private void ProcessAttackInput(InputAction.CallbackContext obj)
+    {
+        if (obj.performed || obj.started)
+        {
+            attackingInput = true;
+        }
+        else
+        {
+            attackingInput= false;
         }
     }
 
@@ -134,7 +153,8 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Move(float acceleration, float deceleration)
     {
-        if (m_State == PlayerStates.NoControl) return;
+        if (m_State == PlayerStates.CompletelyImmobile) return;
+        //if (m_State == PlayerStates.NoControl) return;
         if ((moveInput != Vector2.zero))
         {
             TurnCheck(moveInput);
@@ -149,7 +169,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             moveVelocity = Vector2.Lerp(moveVelocity, Vector2.zero, acceleration * Time.fixedDeltaTime);
-            rb.linearVelocity = new Vector2(moveVelocity.x, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(moveVelocity.x + externalForce.x, rb.linearVelocity.y + externalForce.y);
         }
     }
 
@@ -287,7 +307,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
-        if (m_State == PlayerStates.NoControl) return;
+        if (m_State == PlayerStates.NoControl || m_State == PlayerStates.CompletelyImmobile) return;
         if (isJumping)
         {
             //headbump check
@@ -401,4 +421,5 @@ public enum PlayerStates
     Regular,
     Hooking,
     NoControl,
+    CompletelyImmobile,
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3663556588950494668}
   - component: {fileID: 7693757068043132716}
   - component: {fileID: 6115942821602893497}
+  - component: {fileID: 6629053402543250715}
   m_Layer: 0
   m_Name: '[PLAYER]'
   m_TagString: Untagged
@@ -92,6 +93,7 @@ MonoBehaviour:
   fastFallTime: 0
   fastFallReleaseSpeed: 0
   jumpWasPressed: 0
+  externalForce: {x: 0, y: 0}
 --- !u!114 &7693757068043132716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,9 +140,34 @@ MonoBehaviour:
   hookHand: {fileID: 1666537258931322301}
   hookSpeed: 50
   hookState: 0
+  joint: {fileID: 5772814077338385751}
   LayerMask:
     serializedVersion: 2
     m_Bits: 64
+  PlayerLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+--- !u!231 &6629053402543250715
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755468914117140110}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 4342357851003285926}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 0.005
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!1 &2334702877953440111
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +532,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1666537258931322301}
   - component: {fileID: 2320021950625381623}
+  - component: {fileID: 4342357851003285926}
+  - component: {fileID: 5772814077338385751}
   m_Layer: 0
   m_Name: Hook Hand
   m_TagString: Untagged
@@ -582,3 +611,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &4342357851003285926
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317897149596576212}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 50
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 297bdf36229d3b74498c3dc2e20263e0, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!231 &5772814077338385751
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317897149596576212}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 2946564688255904581}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 0.005
+  m_DampingRatio: 1
+  m_Frequency: 0
