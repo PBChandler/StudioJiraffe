@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D feetColl, bodyColl;
 
     private Vector2 moveVelocity;
-    private bool isFacingRight;
+    public bool isFacingRight;
 
     private RaycastHit2D groundHit;
     private RaycastHit2D headHit;

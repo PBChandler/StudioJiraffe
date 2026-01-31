@@ -86,9 +86,11 @@ MonoBehaviour:
   MoveStats: {fileID: 11400000, guid: 174d610c568ea04418eb0ea5e3f3103b, type: 2}
   feetColl: {fileID: 8438956568791228179}
   bodyColl: {fileID: 5878703425990817616}
+  isFacingRight: 0
   isGrounded: 0
   lookInput: {x: 0, y: 0}
   hookingInput: 0
+  attackingInput: 0
   VerticalVelocity: 0
   fastFallTime: 0
   fastFallReleaseSpeed: 0
@@ -147,6 +149,7 @@ MonoBehaviour:
   PlayerLayerMask:
     serializedVersion: 2
     m_Bits: 1
+  capturedEnemy: {fileID: 0}
 --- !u!231 &6629053402543250715
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -178,6 +181,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6822003249256294443}
   - component: {fileID: 2068998782324537814}
+  - component: {fileID: 947999925546014922}
+  - component: {fileID: 8654345218405282778}
   m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
@@ -243,8 +248,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -7963733173207968564, guid: 2151c672485c26341bfe0aa0a216589e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -255,6 +260,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &947999925546014922
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334702877953440111}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0246997c6291d93439b245725e4f3018, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8654345218405282778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334702877953440111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c30fe8ef35e5ef478017987afbb9557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flip: {fileID: 3663556588950494668}
 --- !u!1 &3245200130048171133
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7538390178606949885}
   - component: {fileID: 8438956568791228179}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
