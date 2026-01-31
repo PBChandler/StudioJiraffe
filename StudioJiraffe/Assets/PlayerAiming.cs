@@ -60,7 +60,7 @@ public class PlayerAiming : MonoBehaviour
         {
             hookState = hookStates.LURING;
         }
-        hookHit = Physics2D.CircleCast(hookHand.position, 0.4f, hookHand.transform.up, 1f, LayerMask);
+        hookHit = Physics2D.CircleCast(hookHand.position, 0.4f, hookHand.transform.up, 0.5f, LayerMask);
         hookCapture = Physics2D.CircleCast(new Vector2(hookHand.position.x + baseAim.normalized.x, hookHand.position.y + baseAim.normalized.y), 0.4f, hookHand.transform.up, 0.85f, PlayerLayerMask);
         aimingUp = pm.lookInput.y > 0.5f; 
         if(hookCapture.collider != null && hookCapture.collider.transform.parent.GetComponent<PlayerAiming>() != this && hookCapture.collider.transform.parent.parent.GetComponent<PlayerAiming>() != this)
