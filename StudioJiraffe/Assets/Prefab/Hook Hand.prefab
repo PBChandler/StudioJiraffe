@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1: {r: 0.6901961, g: 0.078431375, b: 0, a: 1}
   p2: {r: 0.27146307, g: 0.33862376, b: 0.8037735, a: 1}
+  playerAim: {fileID: 0}
   anim: {fileID: 0}
 --- !u!96 &954833086726806844
 TrailRenderer:
