@@ -23,7 +23,7 @@ public class PlayerAiming : MonoBehaviour
     public LayerMask PlayerLayerMask;
     public Transform capturedEnemy;
 
-    
+    public Vector2 direction;
     void Start()
     {
         joint.enabled = false;
@@ -40,6 +40,7 @@ public class PlayerAiming : MonoBehaviour
         hookHand.localPosition = pm.lookInput;
         baseAim = hookHand.localPosition;
         currentAim = baseAim;
+        direction = new Vector2(baseAim.x, baseAim.y);
         if (pm.hookingInput)
         {
             hookState = hookStates.HOOKING;
@@ -52,7 +53,7 @@ public class PlayerAiming : MonoBehaviour
         pm.rb.gravityScale = 0f;
         pm.rb.mass = 0.0001f;
         pm.m_State = PlayerStates.Hooking;
-        Vector2 direction = new Vector2(baseAim.x, baseAim.y);
+        direction = new Vector2(baseAim.x, baseAim.y);
         currentAim += direction * Time.deltaTime * hookSpeed;
         hookHand.localPosition = currentAim;
         if(!pm.hookingInput)
@@ -91,7 +92,7 @@ public class PlayerAiming : MonoBehaviour
     {
         joint.enabled = false;
         pm.m_State = PlayerStates.Hooking;
-        Vector2 direction = new Vector2(baseAim.x, baseAim.y);
+        direction = new Vector2(baseAim.x, baseAim.y);
         currentAim -= direction * Time.deltaTime * hookSpeed;
         hookHand.localPosition = currentAim;
  
@@ -119,7 +120,7 @@ public class PlayerAiming : MonoBehaviour
     {
         airtime += Time.deltaTime;
         joint.enabled = true;   
-        Vector2 direction = -(new Vector2(transform.position.x - hitpoint.x, transform.position.y - hitpoint.y));
+        direction = -(new Vector2(transform.position.x - hitpoint.x, transform.position.y - hitpoint.y));
         pm.m_State = PlayerStates.NoControl;
         pm.rb.linearVelocity = direction * 5f;
         pm.externalForce = direction * 5f;

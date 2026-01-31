@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput = Vector2.zero;
     public float moveSpeed;
 
+    public Animator animator;
     [Header("References")]
     public PlayerMovementStats MoveStats;
     public Collider2D feetColl, bodyColl;
