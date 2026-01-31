@@ -11,6 +11,7 @@ public class startbutton : MonoBehaviour
 {
     public Button m_button;
     public TextMeshProUGUI m_Text;
+    public Animator Animator;
 
     private void Start()
     {
@@ -18,9 +19,14 @@ public class startbutton : MonoBehaviour
     }
     public void ButtonOnClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        GetComponent<Button>().enabled = false;
+        Animator.SetTrigger("Pressed");
         m_button.interactable = false;
         m_Text.text = "Loading...";
         Debug.Log("Start Button Clicked");
+    }
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
