@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Pimhelper : MonoBehaviour
 {
-    PlayerInputManager chiller;
+    public PlayerInputManager chiller;
+    public playerFollower follower1, follower2;
     public Transform theGrouper;
     public void Awake()
     {
@@ -14,5 +15,16 @@ public class Pimhelper : MonoBehaviour
     private void Chiller_onPlayerJoined(PlayerInput obj)
     {
         obj.transform.parent = theGrouper;
+        if(follower1.occupied == false)
+        {
+            follower1.occupied = true;
+            follower1.target = obj.transform;
+            return;
+        }
+        else
+        {
+            follower2.occupied = true;
+            follower2.target = obj.transform;
+        }
     }
 }
