@@ -19,12 +19,12 @@ public class Pimhelper : MonoBehaviour
         obj.transform.parent = theGrouper;
         if(follower1.occupied == false)
         {
+            h1.boss = obj.GetComponent<PlayerAiming>();
+            
             follower1.occupied = true;
             follower1.target = obj.transform;
-            h1.boss = obj.GetComponent<PlayerAiming>();
             obj.GetComponent<PlayerHealth>().playerID = 0;
             GAME.instance.player1 = obj.transform;
-            return;
         }
         else
         {

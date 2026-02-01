@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
             targetVelocity = new Vector2(moveInput.x, 0f) * MoveStats.MaxRunSpeed;
 
             moveVelocity = Vector2.Lerp(moveVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
-            rb.linearVelocity = new Vector2(moveVelocity.x, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(moveVelocity.x + externalForce.x, rb.linearVelocity.y + externalForce.y);
         }
         else
         {
@@ -393,7 +393,7 @@ public class PlayerMovement : MonoBehaviour
 
         VerticalVelocity = Mathf.Clamp(VerticalVelocity, -MoveStats.MaxFallSpeed, 50f);
 
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, VerticalVelocity);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, VerticalVelocity+externalForce.y);
     }
 
     private void CountTimers()

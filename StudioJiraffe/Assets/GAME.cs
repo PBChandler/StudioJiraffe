@@ -12,6 +12,8 @@ public class GAME : MonoBehaviour
     public GameObject healthBar;
     bool RoundStarted = false;
     public TimerControl timerCtrl;
+    public AudioSource gamemusic;
+    bool holdyourhorses = false;
     public bool notonline;
     public void Start()
     {
@@ -24,11 +26,16 @@ public class GAME : MonoBehaviour
         }
    
     }
-
+    public void ckshuffle()
+    {
+        holdyourhorses = false;
+    }
     public void Update()
     {
         if(player1 != null && player2 != null && !RoundStarted)
         {
+            if(!gamemusic.isPlaying)
+                gamemusic.Play();
             notonline = true;
             player1.transform.position = p1Spawnpoint.transform.position;
             player2.transform.position = p2Spawnpoint.transform.position;
@@ -63,6 +70,8 @@ public class GAME : MonoBehaviour
             default:
                 break;
         }
+        holdyourhorses = true;
+        Invoke("ckshuffle", 1.5f);
         EndOfRoundObject.SetActive(true);
         EndOfRoundObject.GetComponent<EndOfRoundObject>().Call(player);
         healthBar.SetActive(false);
@@ -70,6 +79,7 @@ public class GAME : MonoBehaviour
 
     public void NewRound()
     {
+        if (holdyourhorses) return;
         RoundStarted = false;
         healthBar.SetActive(true);
         player1.transform.position = p1Spawnpoint.position;
@@ -95,6 +105,8 @@ public class GAME : MonoBehaviour
     }
     public void Restart()
     {
+        if (holdyourhorses) return;
+        gamemusic.Stop();
         p1Score = 0;
         p2Score = 0;
         player1.transform.position = p1Spawnpoint.position;

@@ -22,8 +22,11 @@ public class PlayerAiming : MonoBehaviour
     public LayerMask LayerMask;
     public LayerMask PlayerLayerMask;
     public Transform capturedEnemy;
-
+    bool hookStarted = false;
+    Vector2 lastGoodAim;
     public Vector2 direction;
+    public bool soundCooldownAttack;
+    public AudioClip attackSound;
     void Start()
     {
         joint.enabled = false;
@@ -39,6 +42,8 @@ public class PlayerAiming : MonoBehaviour
         pm.m_State = PlayerStates.Regular;
         hookHand.localPosition = pm.lookInput;
         baseAim = hookHand.localPosition;
+        
+    
         currentAim = baseAim;
         direction = new Vector2(baseAim.x, baseAim.y);
         if (pm.hookingInput)
@@ -54,6 +59,7 @@ public class PlayerAiming : MonoBehaviour
         pm.rb.mass = 0.0001f;
         pm.m_State = PlayerStates.Hooking;
         direction = new Vector2(baseAim.x, baseAim.y);
+        lastGoodAim = direction;
         currentAim += direction * Time.deltaTime * hookSpeed;
         hookHand.localPosition = currentAim;
         if(!pm.hookingInput)
@@ -65,7 +71,17 @@ public class PlayerAiming : MonoBehaviour
         aimingUp = pm.lookInput.y > 0.5f; 
         if(hookCapture.collider != null && hookCapture.collider.transform.parent.GetComponent<PlayerAiming>() != this && hookCapture.collider.transform.parent.parent.GetComponent<PlayerAiming>() != this)
         {
-            PlayerMovement targPM = hookCapture.collider.transform.parent.parent.GetComponent<PlayerMovement>();
+            PlayerMovement targPM;
+            if (GetComponent<PlayerHealth>().playerID == 0)
+            {
+                Debug.Log("BUT NO ONE");
+                targPM = GAME.instance.player2.GetComponent<PlayerMovement>();
+            }
+            else
+            {
+                targPM = GAME.instance.player1.GetComponent<PlayerMovement>();
+            }
+
             targPM.externalForce = (transform.position - targPM.transform.position).normalized;
             targPM.m_State = PlayerStates.CompletelyImmobile;
             targPM.rb.linearVelocity = Vector2.zero;
@@ -158,19 +174,79 @@ public class PlayerAiming : MonoBehaviour
         hookHand.localPosition = pm.lookInput;
         pm.m_State = PlayerStates.CompletelyImmobile;
         capturedEnemy.GetComponent<PlayerMovement>().m_State = PlayerStates.CompletelyImmobile;
+        if (GetComponent<PlayerHealth>().playerID == 0)
+        {
+            pm.animator.Play("attack");
+        }
+        else
+        {
+            pm.animator.Play("blue_attack1");
+        }
         if (pm.attackingInput)
         {
+            PlayerMovement targPM;
+            if (GetComponent<PlayerHealth>().playerID == 0)
+            {
+                targPM = GAME.instance.player2.GetComponent<PlayerMovement>();
+                LaunchPlayer(targPM);
+                if (GetComponent<PlayerHealth>().playerID == 0)
+                {
+                    pm.animator.Play("attack2");
+                }
+            }
+            else
+            {
+                targPM = GAME.instance.player1.GetComponent<PlayerMovement>();
+                LaunchPlayer(targPM);
+                if (GetComponent<PlayerHealth>().playerID == 0)
+                {
+                    pm.animator.Play("blue_attack2");
+                }
+            }
+                Debug.Log("burgerking");
             pm.m_State = PlayerStates.Regular;
-            capturedEnemy.GetComponent<PlayerMovement>().m_State = PlayerStates.NoControl;
-            capturedEnemy.GetComponent<PlayerMovement>().externalForce = (new Vector2(-baseAim.x * 5f, -baseAim.y + 1f))* 50f;
+            
             Invoke("closedown", 0.1f);
+            Invoke("modern", 1f);
         }
     }
 
+    public void LaunchPlayer(PlayerMovement targPM)
+    {
+        targPM.m_State = PlayerStates.CompletelyImmobile;
+        Vector3 target = new Vector3(transform.position.x + (-baseAim * 5f).x, transform.position.y + (-baseAim * 5f).y);
+       targPM.transform.position = Vector3.Lerp(targPM.transform.position,target+new Vector3(0,5f,0), 2f);
+        if(!soundCooldownAttack)
+        {
+            AudioSource.PlayClipAtPoint(attackSound, transform.position);
+            soundCooldownAttack = true;
+            Invoke("resetSound", 0.1f);
+        }
+        
+        // targPM.externalForce = (new Vector2(-lastGoodAim.x * 5f, -lastGoodAim.y + 5f)) * 50f;
+        // targPM.rb.linearVelocity = (new Vector2(-baseAim.x * 5f, -baseAim.y + 1f)) * 50f;
+    }
+
+    public void resetSound()
+    {
+        soundCooldownAttack = false;
+    }
     void closedown()
     {
         capturedEnemy = null;
         hookState = hookStates.NOTBEINGUSED;
+    }
+
+    public void modern()
+    {
+        if (GetComponent<PlayerHealth>().playerID == 0)
+        {
+            pm.animator.Play("player1blendrtree");
+        }
+        else
+        {
+            pm.animator.Play("player2blendtree");
+        }
     }
     // Update is called once per frame
     void Update()
