@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 74deb5cf230c50347b19b100fb361007
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7009427483126140895
+    second: Hook_Duel_Ship-5 1_0
+  - first:
+      213: 6077675145286515933
+    second: Hook_Duel_Ship-5 1_1
+  - first:
+      213: 3264295254401687165
+    second: Hook_Duel_Ship-5 1_2
+  - first:
+      213: 3847732670432072940
+    second: Hook_Duel_Ship-5 1_3
+  - first:
+      213: -1570010541161637262
+    second: Hook_Duel_Ship-5 1_4
+  - first:
+      213: 5348641267301149547
+    second: Hook_Duel_Ship-5 1_5
+  - first:
+      213: -9179309788650139479
+    second: Hook_Duel_Ship-5 1_6
+  - first:
+      213: 2536697615689293889
+    second: Hook_Duel_Ship-5 1_7
+  - first:
+      213: -4706589519684360761
+    second: Hook_Duel_Ship-5 1_8
+  - first:
+      213: 7603087791922582767
+    second: Hook_Duel_Ship-5 1_9
+  - first:
+      213: -3331263272160462328
+    second: Hook_Duel_Ship-5 1_10
+  - first:
+      213: 7160849448458073625
+    second: Hook_Duel_Ship-5 1_11
+  - first:
+      213: -2163061434603205734
+    second: Hook_Duel_Ship-5 1_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_0
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 536
+        width: 124
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120f76577d289be90800000000000000
+      internalID: -7009427483126140895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_1
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 495
+        width: 145
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcf50ff75d385450800000000000000
+      internalID: 6077675145286515933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 433
+        width: 117
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e1b982d3b1d4d20800000000000000
+      internalID: 3264295254401687165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_3
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 441
+        width: 343
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4d4c34a74e56530800000000000000
+      internalID: 3847732670432072940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_4
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 399
+        width: 184
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a11782bb3363ae0800000000000000
+      internalID: -1570010541161637262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_5
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 403
+        width: 399
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6bea70f4e03a3a40800000000000000
+      internalID: 5348641267301149547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_6
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 350
+        width: 1277
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a01e3c916a8c9080800000000000000
+      internalID: -9179309788650139479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_7
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 292
+        width: 1259
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 140adbd9a09243320800000000000000
+      internalID: 2536697615689293889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_8
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 244
+        width: 1222
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c523a7b4c5deaeb0800000000000000
+      internalID: -4706589519684360761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_9
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 191
+        width: 1146
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe497a95018938960800000000000000
+      internalID: 7603087791922582767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_10
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 144
+        width: 1111
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80af19924b9f4c1d0800000000000000
+      internalID: -3331263272160462328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_11
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 163
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916356132a2706360800000000000000
+      internalID: 7160849448458073625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_Duel_Ship-5 1_12
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 118
+        width: 1052
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b012be5134bf1e0800000000000000
+      internalID: -2163061434603205734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hook_Duel_Ship-5 1_0: -7009427483126140895
+      Hook_Duel_Ship-5 1_1: 6077675145286515933
+      Hook_Duel_Ship-5 1_10: -3331263272160462328
+      Hook_Duel_Ship-5 1_11: 7160849448458073625
+      Hook_Duel_Ship-5 1_12: -2163061434603205734
+      Hook_Duel_Ship-5 1_2: 3264295254401687165
+      Hook_Duel_Ship-5 1_3: 3847732670432072940
+      Hook_Duel_Ship-5 1_4: -1570010541161637262
+      Hook_Duel_Ship-5 1_5: 5348641267301149547
+      Hook_Duel_Ship-5 1_6: -9179309788650139479
+      Hook_Duel_Ship-5 1_7: 2536697615689293889
+      Hook_Duel_Ship-5 1_8: -4706589519684360761
+      Hook_Duel_Ship-5 1_9: 7603087791922582767
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

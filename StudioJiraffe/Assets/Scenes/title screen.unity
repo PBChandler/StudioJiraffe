@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Start Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6959948463160056618, guid: b8ac8a0a8085c0c44b8554d9efa0b940, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7063031776962861522, guid: b8ac8a0a8085c0c44b8554d9efa0b940, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -668,6 +672,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1733792213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249615250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f03be1c72d62e44e98bf61854990d2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2022585945
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 249615250}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2022585948
@@ -894,6 +910,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6959948463160056618, guid: b8ac8a0a8085c0c44b8554d9efa0b940, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1733792208}
+    - targetCorrespondingSourceObject: {fileID: 6959948463160056618, guid: b8ac8a0a8085c0c44b8554d9efa0b940, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1733792213}
   m_SourcePrefab: {fileID: 100100000, guid: b8ac8a0a8085c0c44b8554d9efa0b940, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
