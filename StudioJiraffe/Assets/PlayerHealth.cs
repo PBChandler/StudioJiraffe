@@ -18,6 +18,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    
+
+    public void OnLevelWasLoaded(int level)
+    {
+        dg_onHurt?.Invoke();
+    }
+
 
 }

@@ -140,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GAME.instance.notonline) return;
         CollisionChecks();
         Jump();
        
@@ -297,6 +298,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void InitiateJump(int naumberOfJumpsUsed)
     {
+        animator.SetTrigger("jump");
         if(!isJumping)
         {
             isJumping = true;
@@ -410,10 +412,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GAME.instance.notonline) return;
         CountTimers();
         JumpChecks();
 
+        animator.SetBool("grounded", isGrounded);
         int parse = 0;
         if (Mathf.Abs(moveInput.x) > 0)
         {

@@ -242,4 +242,29 @@ public class PlayerAiming : MonoBehaviour
         LAUNCHING,
         HITSTATE,
     }
+
+    public bool IsHookActive =>
+    hookState != hookStates.NOTBEINGUSED;
+
+    public Vector3 HookEndPoint
+    {
+        get
+        {
+            switch (hookState)
+            {
+                case hookStates.HOOKING:
+                    return transform.position + (Vector3)currentAim;
+                case hookStates.LURING:
+                    return transform.position + (Vector3)currentAim;
+                case hookStates.HITSTATE:
+                    if(capturedEnemy == null) return transform.position;
+                    else
+                        return capturedEnemy.position;
+                case hookStates.LAUNCHING:
+                    return hitpoint;
+                default:
+                    return transform.position;
+            }
+        }
+    }
 }
