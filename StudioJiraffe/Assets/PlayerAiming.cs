@@ -157,7 +157,8 @@ public class PlayerAiming : MonoBehaviour
         pm.m_State = PlayerStates.Regular;
         hookHand.localPosition = pm.lookInput;
         pm.m_State = PlayerStates.CompletelyImmobile;
-        if(pm.attackingInput)
+        capturedEnemy.GetComponent<PlayerMovement>().m_State = PlayerStates.CompletelyImmobile;
+        if (pm.attackingInput)
         {
             pm.m_State = PlayerStates.Regular;
             capturedEnemy.GetComponent<PlayerMovement>().m_State = PlayerStates.NoControl;

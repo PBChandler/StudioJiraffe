@@ -1,0 +1,554 @@
+fileFormatVersion: 2
+guid: e4f3af250cd90c143b5465f724a1adea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5005996251167505746
+    second: redRun_0
+  - first:
+      213: 9162069023030709171
+    second: redRun_1
+  - first:
+      213: 638060572658124860
+    second: redRun_2
+  - first:
+      213: -4962472557245268240
+    second: redRun_3
+  - first:
+      213: -8504471126268916500
+    second: redRun_4
+  - first:
+      213: -4234545728245673513
+    second: redRun_5
+  - first:
+      213: -3306098566898325363
+    second: redRun_6
+  - first:
+      213: 4858171252278468337
+    second: redRun_7
+  - first:
+      213: -4423210210471377103
+    second: redRun_8
+  - first:
+      213: 5070075944882692750
+    second: redRun_9
+  - first:
+      213: 1237882905396838056
+    second: redRun_10
+  - first:
+      213: -6957966953377847890
+    second: redRun_11
+  - first:
+      213: -7139387075524804427
+    second: redRun_12
+  - first:
+      213: 4639078444176161129
+    second: redRun_13
+  - first:
+      213: -1035622501721234144
+    second: redRun_14
+  - first:
+      213: 2551976643161148157
+    second: redRun_15
+  - first:
+      213: 8960745793838731908
+    second: redRun_16
+  - first:
+      213: -3368546034151325050
+    second: redRun_17
+  - first:
+      213: -3241964053644853739
+    second: redRun_18
+  - first:
+      213: 4715140104601221038
+    second: redRun_19
+  - first:
+      213: 7443516712878914974
+    second: redRun_20
+  - first:
+      213: 2982085381727610588
+    second: redRun_21
+  - first:
+      213: 6669182852177847355
+    second: redRun_22
+  - first:
+      213: 8420562886318684640
+    second: redRun_23
+  - first:
+      213: 8823878887237397365
+    second: redRun_24
+  - first:
+      213: 106735151096491949
+    second: redRun_25
+  - first:
+      213: -3606225644276674466
+    second: redRun_26
+  - first:
+      213: -2886531049378975687
+    second: redRun_27
+  - first:
+      213: 1813275582811011890
+    second: redRun_28
+  - first:
+      213: -1406556272982612578
+    second: redRun_29
+  - first:
+      213: 7743233126522777022
+    second: redRun_30
+  - first:
+      213: 8688894716367308735
+    second: redRun_31
+  - first:
+      213: -4303276325339193515
+    second: redRun_32
+  - first:
+      213: -7930154085687746188
+    second: redRun_33
+  - first:
+      213: -7205765403273261336
+    second: redRun_34
+  - first:
+      213: -9204482114275649440
+    second: redRun_35
+  - first:
+      213: -5982574929328697654
+    second: redRun_36
+  - first:
+      213: -954403709842320893
+    second: redRun_37
+  - first:
+      213: 7938025767518012244
+    second: redRun_38
+  - first:
+      213: 1549610566125362503
+    second: redRun_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 530
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: redRun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2182
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25db6c9411fd87540800000000000000
+      internalID: 5005996251167505746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_1
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 2182
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb0b55db35362f70800000000000000
+      internalID: 9162069023030709171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_2
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 2182
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c384872d5b8dad800800000000000000
+      internalID: 638060572658124860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_3
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 2182
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe75c16081c12bb0800000000000000
+      internalID: -4962472557245268240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_4
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 2182
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceccc2cb19c0af980800000000000000
+      internalID: -8504471126268916500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1091
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1d4c2881fdb35c0800000000000000
+      internalID: -4234545728245673513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_6
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1091
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d88e89faed06e12d0800000000000000
+      internalID: -3306098566898325363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_7
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 1091
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe9216a301bb6340800000000000000
+      internalID: 4858171252278468337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_8
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1091
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13709fdafb99d92c0800000000000000
+      internalID: -4423210210471377103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_9
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 1091
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e826cfe95378c5640800000000000000
+      internalID: 5070075944882692750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aef4b1a1f7dd2110800000000000000
+      internalID: 1237882905396838056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redRun_11
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 0
+        width: 729
+        height: 1087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5a109bbe5507f90800000000000000
+      internalID: -6957966953377847890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ab141de29745b2442995f229c14c807c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      redRun_0: 5005996251167505746
+      redRun_1: 9162069023030709171
+      redRun_10: 1237882905396838056
+      redRun_11: -6957966953377847890
+      redRun_12: -7139387075524804427
+      redRun_13: 4639078444176161129
+      redRun_2: 638060572658124860
+      redRun_3: -4962472557245268240
+      redRun_4: -8504471126268916500
+      redRun_5: -4234545728245673513
+      redRun_6: -3306098566898325363
+      redRun_7: 4858171252278468337
+      redRun_8: -4423210210471377103
+      redRun_9: 5070075944882692750
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

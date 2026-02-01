@@ -413,6 +413,17 @@ public class PlayerMovement : MonoBehaviour
         
         CountTimers();
         JumpChecks();
+
+        int parse = 0;
+        if (Mathf.Abs(moveInput.x) > 0)
+        {
+            parse = 1;
+        }
+        else
+        {
+            parse = 0;
+        }
+        animator.SetFloat("Blend", parse);
     }
 }
 
