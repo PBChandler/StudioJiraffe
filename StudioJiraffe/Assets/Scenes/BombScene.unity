@@ -270,6 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRenderer: {fileID: 0}
   fire: {fileID: 0}
+  tiedFollower: {fileID: 0}
 --- !u!1 &31631191
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdc1275d43544a498759d99d86531f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  releaseWindow: {fileID: 0}
+  releaseWindow: {fileID: 31631193}
+  distance: 0
+  myParticles: {fileID: 0}
 --- !u!1 &271689253
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 0}
+  on: 1
 --- !u!4 &271689256
 Transform:
   m_ObjectHideFlags: 0
@@ -1876,6 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 0}
+  on: 1
 --- !u!4 &1091033218
 Transform:
   m_ObjectHideFlags: 0

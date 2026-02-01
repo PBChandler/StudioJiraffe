@@ -30,20 +30,20 @@ public class bomb : HookInteractable
 
     public override void ExitEvent(Collider2D other, Rigidbody2D myRigidbody)
     {
-        StartCoroutine(explode(myRigidbody));
+        //StartCoroutine(explode(myRigidbody));
         
 
         base.ExitEvent(other, myRigidbody);
 
     }
     
-    IEnumerator explode (Rigidbody2D myRigidbody)
-    {
+    //IEnumerator explode (Rigidbody2D myRigidbody)
+    //{
 
-        yield return new WaitForSeconds(1f);
-        transform.parent = null;
-        myRigidbody.bodyType = RigidbodyType2D.Dynamic;
-        myParticles.enableEmission = true;
-        Destroy(gameObject); 
-    }
+    //    yield return new WaitForSeconds(1f);
+    //    transform.parent = null;
+    //    myRigidbody.bodyType = RigidbodyType2D.Dynamic;
+    //    myParticles.enableEmission = true;
+    //    Destroy(gameObject); 
+    //}
 }
