@@ -6,13 +6,19 @@ public class GAME : MonoBehaviour
 {
     public static GAME instance;
     public GameObject EndOfRoundObject;
-    int p1Score, p2Score;
+    public int p1Score, p2Score;
+    public Transform p1Spawnpoint, p2Spawnpoint;
+    public Transform player1, player2;
     public void Start()
     {
         if (GAME.instance != null && GAME.instance != this)
-            Destroy(this);
+            Destroy(this.gameObject);
         else
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+   
     }
     public void EndOfRound(int player)
     {
@@ -35,11 +41,31 @@ public class GAME : MonoBehaviour
 
     public void NewRound()
     {
+        player1.transform.position = p1Spawnpoint.position;
+        player2.transform.position = p2Spawnpoint.position;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        EndOfRoundObject.SetActive(false);
     }
 
+    public void OnLevelWasLoaded(int level)
+    {
+        if(level == 1)
+        {
+            player1.transform.position = p1Spawnpoint.position;
+            player2.transform.position = p2Spawnpoint.position;
+            player1.GetComponent<PlayerMovement>().m_State = PlayerStates.Regular;
+            player2.GetComponent<PlayerMovement>().m_State = PlayerStates.Regular;
+        }
+    }
     public void Restart()
     {
+        p1Score = 0;
+        p2Score = 0;
+        player1.transform.position = p1Spawnpoint.position;
+        player2.transform.position = p2Spawnpoint.position;
+        player1.GetComponent<PlayerMovement>().m_State = PlayerStates.CompletelyImmobile;
+        player2.GetComponent<PlayerMovement>().m_State = PlayerStates.CompletelyImmobile;
+        EndOfRoundObject.SetActive(false);
         SceneManager.LoadSceneAsync("title screen");
     }
 }

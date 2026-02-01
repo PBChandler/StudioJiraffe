@@ -9,7 +9,9 @@ public class EndOfRoundObject : MonoBehaviour
     public void Call(int id)
     {
         p1.text = id == 1 ? "WINNER!" : "LOSER :(";
+        p1.text += " " + GAME.instance.p1Score;
         p2.text = id == 1 ? "LOSER :(" : "WINNER!";
+        p2.text += " " + GAME.instance.p2Score;
         b.Select();
     }
 }
