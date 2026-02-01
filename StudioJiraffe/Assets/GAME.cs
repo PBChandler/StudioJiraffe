@@ -10,6 +10,9 @@ public class GAME : MonoBehaviour
     public Transform p1Spawnpoint, p2Spawnpoint;
     public Transform player1, player2;
     public GameObject healthBar;
+    bool RoundStarted = false;
+    public TimerControl timerCtrl;
+    public bool notonline;
     public void Start()
     {
         if (GAME.instance != null && GAME.instance != this)
@@ -20,6 +23,30 @@ public class GAME : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
    
+    }
+
+    public void Update()
+    {
+        if(player1 != null && player2 != null && !RoundStarted)
+        {
+            notonline = true;
+            player1.transform.position = p1Spawnpoint.transform.position;
+            player2.transform.position = p2Spawnpoint.transform.position;
+            player1.GetComponent<PlayerMovement>().m_State = PlayerStates.CompletelyImmobile;
+            player2.GetComponent<PlayerMovement>().m_State = PlayerStates.CompletelyImmobile;
+            RoundStarted = true;
+            timerCtrl.Ready();
+            Invoke("invokable", 4f);
+        }
+    }
+
+    private void invokable()
+    {
+        player1.GetComponent<PlayerMovement>().m_State = PlayerStates.Regular;
+        player2.GetComponent<PlayerMovement>().m_State = PlayerStates.Regular;
+        player1.transform.position = p1Spawnpoint.transform.position;
+        player2.transform.position = p2Spawnpoint.transform.position;
+        notonline = false;
     }
     public void EndOfRound(int player)
     {
@@ -43,6 +70,7 @@ public class GAME : MonoBehaviour
 
     public void NewRound()
     {
+        RoundStarted = false;
         healthBar.SetActive(true);
         player1.transform.position = p1Spawnpoint.position;
         player2.transform.position = p2Spawnpoint.position;
@@ -77,5 +105,6 @@ public class GAME : MonoBehaviour
         SceneManager.LoadSceneAsync("title screen");
         player1.GetComponent<PlayerHealth>().health = 100;
         player2.GetComponent<PlayerHealth>().health = 100;
+        RoundStarted = false;
     }
 }

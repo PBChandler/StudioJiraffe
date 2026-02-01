@@ -14,10 +14,14 @@ public class TimerControl : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
+    }
+
+    public void Ready()
+    {
         countdownTime = 3;
         StartCoroutine(NewRound());
     }
-
     // Update is called once per frame
     void Update()
     {

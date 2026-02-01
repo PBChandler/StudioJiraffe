@@ -140,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GAME.instance.notonline) return;
         CollisionChecks();
         Jump();
        
@@ -411,7 +412,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GAME.instance.notonline) return;
         CountTimers();
         JumpChecks();
 
