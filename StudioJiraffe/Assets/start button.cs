@@ -16,6 +16,7 @@ public class startbutton : MonoBehaviour
     private void Start()
     {
         m_button.onClick.AddListener(ButtonOnClick);
+        m_button.Select();
     }
     public void ButtonOnClick()
     {

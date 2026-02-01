@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,8 @@ public class Pimhelper : MonoBehaviour
             follower1.occupied = true;
             follower1.target = obj.transform;
             h1.boss = obj.GetComponent<PlayerAiming>();
+            obj.GetComponent<PlayerHealth>().playerID = 0;
+            GAME.instance.player1 = obj.transform;
             return;
         }
         else
@@ -29,6 +32,9 @@ public class Pimhelper : MonoBehaviour
             obj.GetComponent<PlayerMovement>().animator.SetBool("player2", true);
             follower2.occupied = true;
             follower2.target = obj.transform;
+            obj.GetComponent<PlayerHealth>().playerID = 1;
+            GAME.instance.player2 = obj.transform;
         }
+        obj.transform.parent = theGrouper;
     }
 }
